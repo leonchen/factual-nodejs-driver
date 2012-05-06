@@ -20,5 +20,8 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/leonchen/factual-api-node.git"
+  },
+  "dependencies": {
+    "oauth": "0.9.7"
   }
 }
