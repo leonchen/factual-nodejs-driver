@@ -23,11 +23,11 @@ Factual.prototype = {
     return new Requests.table(this.requester, tableKey);
   },
 
-  crosswalk: function (factualId) {
-    return new Requests.crosswalk(this.requester, factualId);
+  crosswalk: function (entity, cb) {
+    return Requests.crosswalk(this.requester, entity, cb);
   },
 
-  resolve: function (input) {
+  resolve: function (input, cb) {
     return new Requests.resolve(this.requester, input);
   }
 
