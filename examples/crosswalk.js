@@ -1,9 +1,5 @@
 var helper = require('./test_helper');
-var auth = require('./auth');
-var Factual = require('../factual-api');
-
-var factual = new Factual(auth.key, auth.secret);
-//factual.startDebug();
+var factual = helper.factual;
 
 var entity = {
   id: "57ddbca5-a669-4fcf-968f-a1c8210a479a",

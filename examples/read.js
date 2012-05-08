@@ -1,9 +1,5 @@
 var helper = require('./test_helper');
-var auth = require('./auth');
-var Factual = require('../factual-api');
-
-var factual = new Factual(auth.key, auth.secret);
-//factual.startDebug();
+var factual = helper.factual;
 
 var places = factual.table('places');
 
