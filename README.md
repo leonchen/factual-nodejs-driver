@@ -9,4 +9,12 @@ This API supports queries to Factual's Read, Schema, Crosswalk, and Resolve APIs
 *   [Crosswalk](http://developer.factual.com/display/docs/Places+API+-+Crosswalk): Get third-party IDs
 *   [Resolve](http://developer.factual.com/display/docs/Places+API+-+Resolve): Enrich your data and match it against Factual's
 
+# Install
+
+`````bash
+$ npm install factual-api
+`````
+
+# Documentation
+
 For each usage, please take a look at the example files.
