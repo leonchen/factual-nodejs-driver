@@ -2,8 +2,8 @@
   "name": "factual-api",
   "description": "nodejs package for factual api",
   "keywords": ["factual api", "geo", "lbs", "poi"],
-  "homepage": "https://github.com/leonchen/factual-api-node",
-  "bugs": "https://github.com/leonchen/factual-api-node/issues",
+  "homepage": "https://github.com/leonchen/factual-nodejs-driver",
+  "bugs": "https://github.com/leonchen/factual-nodejs-driver/issues",
   "author": "Leon Chen",
   "version": "0.1.0",
   "licenses": [ { "type": "MIT" }],
@@ -19,7 +19,7 @@
   "bin": {},
   "repository": {
     "type": "git",
-    "url": "git://github.com/leonchen/factual-api-node.git"
+    "url": "git://github.com/leonchen/factual-nodejs-driver.git"
   },
   "dependencies": {
     "oauth": "0.9.7"
