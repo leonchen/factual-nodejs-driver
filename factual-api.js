@@ -29,6 +29,11 @@ Factual.prototype = {
 
   resolve: function (input, cb) {
     return Requests.resolve(this.requester, input, cb);
+  },
+
+  raw: function (req, cb) {
+    return this.requester.raw(req, cb);
+  
   }
 
 };
