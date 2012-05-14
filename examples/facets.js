@@ -6,6 +6,6 @@ var factual = helper.factual;
 
 var places = factual.table('places');
 // get count of starbucks for each city in ca
-var query = factual.query().select('locality').search("starbucks").addFilter({region: "CA"});
+var query = factual.query({filters: {region: "CA"}}).select('locality').search("starbucks");
 places.facets(query, helper.output);
 
