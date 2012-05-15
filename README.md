@@ -36,7 +36,20 @@ places.read(query, function (error, rows) {
   console.log("show "+ rows.count +"/"+ rows.total +"rows:", rows);
 });
 `````
-You can find more examples are in examples/read.js
+
+Filters usage:
+`````javascript
+var query = factual.query().search("starbucks").select('name,address,postcode,region').descSort('status').ascSort('postcode').offset(20).limit(20);
+// only get entities in california or in newyork city
+var filters = new query.OrFilter(new query.RowFilter('region', '$eq', 'CA'), new query.RowFilter('locality', 'newyork'));
+// the same as the above filter
+// var filters = query.parseFilters({"$or":[ {"region":{"$eq":"CA"}}, {"locality":"newyork"} ]});
+places.read(query.setFilters(filters), function (error, rows) {
+  console.log("show "+ rows.count +"/"+ rows.total +"rows:", rows);
+});
+`````
+
+You can find more examples in examples/read.js
 
 ## Schema
 For schema, you only need to specify the table:
