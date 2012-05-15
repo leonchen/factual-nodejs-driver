@@ -7,5 +7,9 @@ module.exports = {
   factual: factual,
   output: function (err, res) {
     process.stdout.write(err ? 'F' : '.');
+  },
+
+  shouldBe: function (got, exp) {
+    process.stdout.write(got == exp ? '.' : 'F');
   }
 }

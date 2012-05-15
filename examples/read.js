@@ -18,6 +18,11 @@ var filters = new query.OrFilter(new query.RowFilter('region', '$eq', 'CA'), new
 query.select('name,address,postcode,region').setFilters(filters).descSort('status').ascSort('postcode').offset(20).limit(20);
 places.read(query, helper.output);
 
+// the same filters as the above one
+// use the parseFilters function
+filters = query.parseFilters({"$or":[ {"region":{"$eq":"CA"}}, {"locality":"newyork"} ]});
+places.read(query.setFilters(filters), helper.output);
+
 var filter = new query.RowFilter('address', '$search', 'santa monica');
 // add more filters
 query.addFilter(filter).offset(0).clearSorts();
