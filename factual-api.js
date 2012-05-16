@@ -31,9 +31,8 @@ Factual.prototype = {
     return Requests.resolve(this.requester, input, cb);
   },
 
-  raw: function (req, cb) {
-    return this.requester.raw(req, cb);
-  
+  raw: function () {
+    return this.requester.raw.apply(this.requester, arguments);
   }
 
 };
