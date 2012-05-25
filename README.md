@@ -61,8 +61,8 @@ factual.table('places').schema(function (error, schema) {
 
 ## Facets
 `````javascript
-// show count(at least 20) of starbucks of each city in california
-var query = factual.query({filters: {region: "CA"}}).select('locality').search("starbucks").minFacetCount(20);
+// show top 5 cities that have more than 20 starbucks in california
+var query = factual.query({filters: {region: "CA"}}).select('locality').search("starbucks").minFacetCount(20).facetLimit(5);
 factual.table('places').facets(query, function (error, facets) {
   console.log('total:', facets.total, ' details:', facets);
 });
