@@ -37,7 +37,7 @@ places.read(query, function (error, rows) {
 });
 `````
 
-Filters usage:
+Row filters usage [doc](http://developer.factual.com/display/docs/Core+API+-+Row+Filters):
 `````javascript
 var query = factual.query().search("starbucks").select('name,address,postcode,region').descSort('status').ascSort('postcode').offset(20).limit(20);
 // only get entities in california or in newyork city
@@ -116,7 +116,7 @@ factual.resolve(input, function (error, res) {
 `````
 
 ## Raw
-This is for advanced users, the value of the res parameter for callback will be factual api's response string
+This is for advanced users, the value of the res parameter for callback will be factual api's response json.
 `````javascript
 // path + query object + callback
 factual.raw('/t/places', {
