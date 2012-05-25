@@ -37,7 +37,7 @@ places.read(query, function (error, rows) {
 });
 `````
 
-Row filters usage [doc](http://developer.factual.com/display/docs/Core+API+-+Row+Filters):
+Row filters ([doc](http://developer.factual.com/display/docs/Core+API+-+Row+Filters)) usage:
 `````javascript
 var query = factual.query().search("starbucks").select('name,address,postcode,region').descSort('status').ascSort('postcode').offset(20).limit(20);
 // only get entities in california or in newyork city
