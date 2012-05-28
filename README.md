@@ -116,7 +116,7 @@ factual.resolve(input, function (error, res) {
 `````
 
 ## Raw
-This is for advanced users, the value of the res parameter for callback will be factual api's response json.
+Request with raw url/query, the response will be factual api's raw response json string.
 `````javascript
 // path + query object + callback
 factual.raw('/t/places', {
@@ -127,15 +127,15 @@ factual.raw('/t/places', {
   filters: {
     locality: {"$in":["los angeles","newyork"]}
   }
-}, function (error, res) {
-  console.log(res);
+}, function (error, responseJSON) {
+  console.log(responseJSON);
 });
 `````
 `````javascript
 //  url + callback
 var qs      = require('querystring');
 var filters = qs.stringify({filters:'{"locality":{"$in":["los angeles","newyork"]}}'});
-factual.raw('/t/places?q=starbucks&sort=locality:asc&limit=10&offset=10&'+filters, function (error, res) {
-  console.log(res);
+factual.raw('/t/places?q=starbucks&sort=locality:asc&limit=10&offset=10&'+filters, function (error, responseJSON) {
+  console.log(responseJSON);
 });
 `````
