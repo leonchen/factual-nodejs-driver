@@ -119,7 +119,7 @@ factual.resolve(input, function (error, res) {
 Request with raw url/query, the response will be factual api's raw response json string.
 `````javascript
 // path + query object + callback
-factual.raw('/t/places', {
+factual.get('/t/places', {
   q: "starbucks",
   limit: 10,
   offset: 10,
@@ -135,7 +135,16 @@ factual.raw('/t/places', {
 //  url + callback
 var qs      = require('querystring');
 var filters = qs.stringify({filters:'{"locality":{"$in":["los angeles","newyork"]}}'});
-factual.raw('/t/places?q=starbucks&sort=locality:asc&limit=10&offset=10&'+filters, function (error, responseJSON) {
+factual.get('/t/places?q=starbucks&sort=locality:asc&limit=10&offset=10&'+filters, function (error, responseJSON) {
   console.log(responseJSON);
 });
+`````
+
+## Debug
+Set debug mode to show debug information(request url, response json)
+`````javascript
+// start debug mode
+factual.startDebug();
+// stop debug mode 
+factual.stopDebug();
 `````

@@ -6,7 +6,8 @@ factual.startDebug();
 module.exports = {
   factual: factual,
   output: function (err, res) {
-    //console.log(err, res);
+    console.log('|DEBUG| error:', err);
+    console.log('|DEBUG| response:', res);
     process.stdout.write((err ? 'F' : '.')+"\n\n");
   },
 
