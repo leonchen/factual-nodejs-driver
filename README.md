@@ -1,3 +1,7 @@
+# NOTE
+This project has been deprecated, it has been moved to Factual's official repo: https://github.com/Factual/factual-nodejs-driver.
+Have Fun!
+
 # About
 
 This is a nodejs client package for [Factual's public API](http://developer.factual.com/display/docs/Factual+Developer+APIs+Version+3).
